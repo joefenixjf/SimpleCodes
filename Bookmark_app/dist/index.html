@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Bookmark app</title>
+  </head>
+  <body class="bg-gradient-secondary">
+    <div id="container" class="container-sm" style="max-width: 900px;">
+      <h1 class="text-center text-light">BookMarker</h1>
+
+      <p id="urlMsg" class="alert alert-danger text-center d-none">
+        url inserida não é válida
+      </p>
+      <div class="jumbotron rounded py-4 px-3">
+        <h3 class="text-center m-0 text-muted">Salve seus sites favoritos</h3>
+        <form id="form">
+          <div class="form-group m-2">
+            <label for="siteNome">Nome do site:</label>
+            <input
+              type="text"
+              id="siteNome"
+              class="form-control"
+              placeholder="Insira o nome do site"
+              required
+            />
+          </div>
+          <div class="form-group m-2">
+            <label for="siteDescricao">Descrição(opcional):</label>
+            <input
+              type="text"
+              id="siteDescricao"
+              class="form-control"
+              placeholder="Insira uma descrição"
+            />
+          </div>
+          <div class="form-group m-2">
+            <label for="siteUrl">Url do site:</label>
+            <input
+              type="text"
+              id="siteUrl"
+              class="form-control"
+              placeholder="Insira a url do site"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary m-2">Salvar</button>
+        </form>
+      </div>
+
+      <div id="siteLista" class="container-sm" style="max-width: 700px;"></div>
+    </div>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

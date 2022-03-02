@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <h1 id='clock'></h1>
+   <h2 class="numero">x</h2>
+   <button onclick="luckNumber()">Click</button>
+   <p id='demo1'></p>
+   <p id='demo2'></p>
+   <p id='demo3'></p>
+   <p id='demo4'></p>
+   <p id='demo5'></p>
+   <p id='demo6'></p>
+    <script>
+        function clock(){
+        function zeroEsquerda(x){
+            if(x<10){
+                x = '0'+x;
+            }
+            return x;
+        }
+        setInterval(function(){
+        data= new Date();
+        hora = zeroEsquerda(data.getHours());
+        minuto = zeroEsquerda(data.getMinutes());
+        segundos = zeroEsquerda(data.getSeconds());
+            zeroEsquerda(hora);
+        document.getElementById("clock").textContent = hora+':'+minuto+':'+segundos;},1000)
+    }
+        clock();
+        function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+        function luckNumber(){
+            document.getElementById('demo1').textContent = getRndInteger(0,35);
+            document.getElementById('demo2').textContent = getRndInteger(5,40);
+            document.getElementById('demo3').textContent = getRndInteger(10,45);
+            document.getElementById('demo4').textContent = getRndInteger(15,50);
+            document.getElementById('demo5').textContent = getRndInteger(20,55);
+            document.getElementById('demo6').textContent = getRndInteger(25,60);
+        }
+    </script>
+</body>
+</html>
